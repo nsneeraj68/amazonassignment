@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17508" started-at="2020-08-24T11:50:51Z" finished-at="2020-08-24T11:51:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17508" started-at="2020-08-24T11:50:51Z" finished-at="2020-08-24T11:51:09Z">
+      <class name="Frameworks.DataDrivenFramework.FirstAutomateProgram">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:Frameworks.DataDrivenFramework.FirstAutomateProgram@2f112965]" name="initialization" is-config="true" duration-ms="6005" started-at="2020-08-24T17:20:51Z" finished-at="2020-08-24T17:20:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method status="PASS" signature="SalesforceLoginLogout()[pri:0, instance:Frameworks.DataDrivenFramework.FirstAutomateProgram@2f112965]" name="SalesforceLoginLogout" duration-ms="11483" started-at="2020-08-24T17:20:57Z" finished-at="2020-08-24T17:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SalesforceLoginLogout -->
+      </class> <!-- Frameworks.DataDrivenFramework.FirstAutomateProgram -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
