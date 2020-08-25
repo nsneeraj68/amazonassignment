@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20162" started-at="2020-08-24T14:54:07Z" finished-at="2020-08-24T14:54:27Z">
+  <suite name="Default suite" duration-ms="17858" started-at="2020-08-25T09:13:48Z" finished-at="2020-08-25T09:14:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20162" started-at="2020-08-24T14:54:07Z" finished-at="2020-08-24T14:54:27Z">
+    <test name="Default test" duration-ms="17858" started-at="2020-08-25T09:13:48Z" finished-at="2020-08-25T09:14:06Z">
       <class name="Frameworks.DataDrivenFramework.FirstAutomateProgram">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:Frameworks.DataDrivenFramework.FirstAutomateProgram@2f112965]" name="initialization" is-config="true" duration-ms="5253" started-at="2020-08-24T20:24:07Z" finished-at="2020-08-24T20:24:12Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:Frameworks.DataDrivenFramework.FirstAutomateProgram@2f112965]" name="initialization" is-config="true" duration-ms="5056" started-at="2020-08-25T14:43:48Z" finished-at="2020-08-25T14:43:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="SalesforceLoginLogout()[pri:0, instance:Frameworks.DataDrivenFramework.FirstAutomateProgram@2f112965]" name="SalesforceLoginLogout" duration-ms="14888" started-at="2020-08-24T20:24:12Z" finished-at="2020-08-24T20:24:27Z">
+        <test-method status="PASS" signature="SalesforceLoginLogout()[pri:0, instance:Frameworks.DataDrivenFramework.FirstAutomateProgram@2f112965]" name="SalesforceLoginLogout" duration-ms="12778" started-at="2020-08-25T14:43:53Z" finished-at="2020-08-25T14:44:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SalesforceLoginLogout -->
