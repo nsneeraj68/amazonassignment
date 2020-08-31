@@ -5,8 +5,8 @@
     <classes>
       <class name="Frameworks.DataDrivenFramework.FirstAutomateProgram">
         <methods>
+          <include name="SalesforceLoginLogout"/>
           <include name="initialization"/>
-          <include name="fbLoginLogout"/>
         </methods>
       </class> <!-- Frameworks.DataDrivenFramework.FirstAutomateProgram -->
     </classes>

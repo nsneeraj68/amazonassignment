@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
  
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -50,13 +49,13 @@ Cell A2 = row 1 and column 0. It reads first row as 0, second row as 1 and so on
 and first column (A) as 0 and second column (B) as 1 and so on*/
 // Import data for Email.
 cell = sheet.getRow(i).getCell(0);
-cell.setCellType(Cell.CELL_TYPE_STRING);
+/*cell.setCellType(Cell.CELL_TYPE_STRING);*/
 driver.findElement(By.id("username")).clear();
 driver.findElement(By.id("username")).sendKeys(cell.getStringCellValue());
 driver.findElement(By.id("submit-btn")).click();
 // Import data for password.
 cell = sheet.getRow(i).getCell(1);
-cell.setCellType(Cell.CELL_TYPE_STRING);
+/*cell.setCellType(Cell.CELL_TYPE_STRING);*/
 driver.findElement(By.id("password")).clear();         
 driver.findElement(By.id("password")).sendKeys(cell.getStringCellValue());
 // To click on Login button
