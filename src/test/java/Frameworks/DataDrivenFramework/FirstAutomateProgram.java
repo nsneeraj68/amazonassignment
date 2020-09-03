@@ -3,8 +3,7 @@ package Frameworks.DataDrivenFramework;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
- 
+import java.util.concurrent.TimeUnit; 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -24,8 +23,8 @@ public void initialization(){
     // To set the path of the Firefox driver.
 System.setProperty("webdriver.gecko.driver", "C:\\Users\\Neeraj Sharma\\eclipse-workspace\\DataDrivenFramework\\driver\\geckodriver.exe");
 driver = new FirefoxDriver();
-    
-    // To launch facebook
+
+    // To launch Salesforce Marketing Cloud App
     driver.get("https://mc.s11.exacttarget.com/cloud/#app/Email");
     // To maximize the browser
     driver.manage().window().maximize();
@@ -39,14 +38,11 @@ public void SalesforceLoginLogout() throws IOException{
 File src=new File("C:\\Users\\Neeraj Sharma\\eclipse-workspace\\DataDrivenFramework\\Excel\\TestData.xlsx");   
 // Load the file.
 FileInputStream fis = new FileInputStream(src);
-// Load he workbook.
+// Load the workbook.
 workbook = new XSSFWorkbook(fis);
 // Load the sheet in which data is stored.
 sheet= workbook.getSheetAt(0);
 for(int i=1; i<=sheet.getLastRowNum(); i++){
-/*I have added test data in the cell A2 as "testemailone@test.com" and B2 as "password"
-Cell A2 = row 1 and column 0. It reads first row as 0, second row as 1 and so on
-and first column (A) as 0 and second column (B) as 1 and so on*/
 // Import data for Email.
 cell = sheet.getRow(i).getCell(0);
 /*cell.setCellType(Cell.CELL_TYPE_STRING);*/
@@ -58,12 +54,47 @@ cell = sheet.getRow(i).getCell(1);
 /*cell.setCellType(Cell.CELL_TYPE_STRING);*/
 driver.findElement(By.id("password")).clear();         
 driver.findElement(By.id("password")).sendKeys(cell.getStringCellValue());
+
 // To click on Login button
 driver.findElement(By.id("submit-btn")).click();
-// To click on Account settings dropdown
-/*driver.findElement(By.xpath("//div[text()='Account Settings']")).click();
-// To click on logout button
-driver.findElement(By.xpath("//text()[.='Log Out']/ancestor::span[1]")).click();*/
+System.out.println("User has logged in succesfully");
+driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+
+
+//Navigate to Overview Page
+driver.findElement(By.xpath("//a[contains(text(),'Overview')]")).click();
+System.out.println("User clicked on Overview link");
+driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+
+
+//navigate to content page
+driver.findElement(By.xpath(".//a[text()='Content']")).click();
+System.out.println("User clicked on Content link");
+driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+
+
+
+//Navigate to Subscribers Page
+driver.findElement(By.linkText("Subscribers")).click();
+System.out.println("User clicked on Subscribers link");
+//driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+
+//Navigate to Admin Page
+driver.findElement(By.xpath("//a[contains(text(),'Admin')]")).click();
+System.out.println("User clicked on Admin link");
+//driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+
+//Mouse hover the Profile settings section
+driver.findElement(By.xpath("//div[@class='mc-header-menu mc-user-info']")).click();
+
+//Clicks on Logout button.
+driver.findElement(By.linkText("Logout")).click();
+
+
+//To close the Browser
+     
+driver.close();
+
 }
 }
 }
