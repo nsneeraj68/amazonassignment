@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Frameworks.DataDrivenFramework.FirstAutomateProgram">
+      <class name="Frameworks.DataDrivenFramework.amazonassignment">
         <methods>
-          <include name="SalesforceLoginLogout"/>
           <include name="initialization"/>
+          <include name="amazon"/>
         </methods>
-      </class> <!-- Frameworks.DataDrivenFramework.FirstAutomateProgram -->
+      </class> <!-- Frameworks.DataDrivenFramework.amazonassignment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
